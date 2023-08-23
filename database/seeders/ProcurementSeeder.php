@@ -12,6 +12,6 @@ class ProcurementSeeder extends Seeder
      */
     public function run(): void
     {
-        Procurement::factory()->count(20)->create(); // Membuat 20 data pengadaan dengan menggunakan factory
+        Procurement::ProcurementFactory()->count(20)->create(); // Membuat 20 data pengadaan dengan menggunakan factory
     }
 }

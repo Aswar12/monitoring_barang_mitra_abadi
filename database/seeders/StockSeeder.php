@@ -12,6 +12,6 @@ class StockSeeder extends Seeder
      */
     public function run(): void
     {
-        Stock::factory()->count(10)->create(); // Membuat 10 data stok barang dengan menggunakan factory
+        Stock::StockFactory()->count(10)->create(); // Membuat 10 data stok barang dengan menggunakan factory
     }
 }
