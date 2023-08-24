@@ -3,8 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\ItemController;
-
-
+use App\Http\Controllers\ProcurementController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,3 +30,10 @@ Route::middleware([
 });
 
 Route::get('/items', [ItemController::class, 'index'])->name('items.index');
+
+Route::get('/procurements', [ProcurementController::class, 'index'])->name('procurements.index');
+Route::get('/procurements/create', [ProcurementController::class, 'create'])->name('procurements.create');
+Route::post('/procurements', [ProcurementController::class, 'store'])->name('procurements.store');
+Route::get('/procurements/{id}', [ProcurementController::class, 'show'])->name('procurements.show');
+// Dan lain-lain
+
