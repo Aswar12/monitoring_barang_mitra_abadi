@@ -5,28 +5,29 @@
         </h2>
     </x-slot>
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-black dark:text-white  overflow-hidden shadow-xl sm:rounded-lg p-4">
-                <h1 class="text-center text-lg font-bold mb-4">Daftar Barang</h1>
 
-                <div class="overflow-x-auto">
-                    <table class=" min-w-full border-2 dark:border-black rounded-xxl ">
+    <div class="py-12 ">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 dark:bg-gray-500">
+            <div class="bg-white dark:bg-gray-500 overflow-hidden shadow-xl sm:rounded-lg rounded-lg p-4">
+                <h1 class="text-center text-lg font-bold mb-2 py-2">Daftar Barang</h1>
+
+                <div class="overflow-x-auto dark:bg-gray-600">
+                    <table class="min-w-full border dark:border-gray-300 rounded-lg ">
                         <thead>
-                            <tr>
-                                <th class="border-2 px-6 py-3">#</th>
-                                <th class="border-2 px-6 py-3">Nama</th>
-                                <th class="border-2 px-6 py-3">Deskripsi</th>
-                                <th class="border-2 px-6 py-3">Harga Satuan</th>
+                            <tr class="bg-gray-100 dark:bg-gray-100 rounded-lg ">
+                                <th class="border px-6 py-3 dark:border-black">#</th>
+                                <th class="border px-6 py-3 dark:border-black">Nama</th>
+                                <th class="border px-6 py-3 dark:border-black">Deskripsi</th>
+                                <th class="border px-6 py-3 dark:border-black">Harga Satuan</th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach ($items as $index => $item)
-                            <tr>
-                                <td class="border-2 px-6 py-3">{{ $index + 1 }}</td>
-                                <td class="border-2 px-6 py-3">{{ $item->name }}</td>
-                                <td class="border-2 px-6 py-3">{{ $item->description }}</td>
-                                <td class="border-2 px-6 py-3">{{ $item->unit_price }}</td>
+                            <tr class="bg-white dark:bg-gray-600">
+                                <td class="border px-6 py-3 dark:border-white">{{ $index + 1 }}</td>
+                                <td class="border px-6 py-3 dark:border-white">{{ $item->name }}</td>
+                                <td class="border px-6 py-3 dark:border-white">{{ $item->description }}</td>
+                                <td class="border px-6 py-3 dark:border-white">{{ $item->unit_price }}</td>
                             </tr>
                             @endforeach
                         </tbody>
@@ -35,6 +36,9 @@
             </div>
         </div>
     </div>
+
+
+
 
 
 

@@ -35,10 +35,11 @@
         @endif
 
         <!-- Page Content -->
-        <main>
+        <main>@livewire('sidebar')
             {{ $slot }}
         </main>
     </div>
+
 
     @stack('modals')
 
