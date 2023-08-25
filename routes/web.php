@@ -18,7 +18,9 @@ use App\Http\Controllers\ProcurementController;
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::get('/home', function () {
+    return view('layouts.home');
+});
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -36,4 +38,3 @@ Route::get('/procurements/create', [ProcurementController::class, 'create'])->na
 Route::post('/procurements', [ProcurementController::class, 'store'])->name('procurements.store');
 Route::get('/procurements/{id}', [ProcurementController::class, 'show'])->name('procurements.show');
 // Dan lain-lain
-

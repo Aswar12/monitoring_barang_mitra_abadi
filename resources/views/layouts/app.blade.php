@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png" />
     <link rel="icon" type="image/png" href="./assets/img/favicon.png" />
-    <title>Soft UI Dashboard Tailwind</title>
+    <title>PT. Mitra Abadi Distribusindo</title>
     @include('part.link')
 
     <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
@@ -18,8 +18,9 @@
     <!-- cards -->
 
     @yield('content')
+    </main>
 
-    @include('part.footer')
+
 </body>
 @include('part.script')
 
