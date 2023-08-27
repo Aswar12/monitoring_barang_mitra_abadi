@@ -21,7 +21,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($items as $index => $item)
+                        @foreach ($procurements as $index => $procurement)
                         <tr class="bg-white dark:bg-gray-600">
                             <td class="border px-6 py-3 dark:border-white">{{ $index + 1 }}</td>
                             <td class="border px-6 py-3 dark:border-white">{{ $procurement->id }}</td>

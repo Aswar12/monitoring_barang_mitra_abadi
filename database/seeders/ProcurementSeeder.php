@@ -2,9 +2,9 @@
 
 namespace Database\Seeders;
 
+use Database\Factories\ProcurementFactory;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Database\Factories\ProcurementFactory;
 use App\Models\Procurement;
 
 class ProcurementSeeder extends Seeder
