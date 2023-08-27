@@ -8,8 +8,8 @@
         <div class="bg-white dark:bg-gray-500 overflow-hidden shadow-xl sm:rounded-lg rounded-lg ">
             <h1 class="text-center text-lg font-bold mb-2 py-2">Daftar Barang</h1>
 
-            <div class="overflow-x-auto dark:bg-gray-600">
-                <table class="min-w-full border dark:border-gray-300 rounded-lg ">
+            <div class="overflow-x-auto dark:bg-gray-600 justify-between">
+                <table class="w-full border-2 dark:border-gray-300 rounded-lg ">
                     <thead>
                         <tr class="bg-gray-100 dark:bg-gray-100 rounded-lg ">
                             <th class="border px-6 py-3 dark:border-black">No</th>
@@ -38,27 +38,6 @@
     </div>
 </div>
 
-<!-- <table>
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Item</th>
-            <th>Kuantitas</th>
-            <th>Total Biaya</th>
-            <th>Tanggal Pengadaan</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach ($procurements as $procurement)
-        <tr>
-            <td>{{ $procurement->id }}</td>
-            <td>{{ $procurement->item->name }}</td>
-            <td>{{ $procurement->order_quantity }}</td>
-            <td>{{ $procurement->total_cost }}</td>
-            <td>{{ $procurement->procurement_date }}</td>
-        </tr>
-        @endforeach
-    </tbody>
-</table> -->
+
 
 @endsection()
