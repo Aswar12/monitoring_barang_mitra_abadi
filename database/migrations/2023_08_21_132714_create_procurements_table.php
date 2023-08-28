@@ -15,7 +15,7 @@ return new class extends Migration
         $table->id();
         $table->unsignedBigInteger('item_id');
         $table->foreign('item_id')->references('id')->on('items');
-        $table->decimal('order_quantity', 10, 2); // kuantitas pemesanan dalam satu pesanan
+        $table->integer('order_quantity');
         $table->decimal('total_cost', 10, 2);
         $table->date('procurement_date');
         $table->timestamps();

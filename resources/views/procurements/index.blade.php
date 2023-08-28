@@ -13,7 +13,6 @@
                     <thead>
                         <tr class="bg-gray-100 dark:bg-gray-100 rounded-lg ">
                             <th class="border px-6 py-3 dark:border-black">No</th>
-                            <th class="border px-6 py-3 dark:border-black">ID</th>
                             <th class="border px-6 py-3 dark:border-black">Item</th>
                             <th class="border px-6 py-3 dark:border-black">Kuantitas</th>
                             <th class="border px-6 py-3 dark:border-black">Total Biaya</th>
@@ -24,7 +23,6 @@
                         @foreach ($procurements as $index => $procurement)
                         <tr class="bg-white dark:bg-gray-600">
                             <td class="border px-6 py-3 dark:border-white">{{ $index + 1 }}</td>
-                            <td class="border px-6 py-3 dark:border-white">{{ $procurement->id }}</td>
                             <td class="border px-6 py-3 dark:border-white">{{ $procurement->item->name }}</td>
                             <td class="border px-6 py-3 dark:border-white">{{ $procurement->order_quantity }}</td>
                             <td class="border px-6 py-3 dark:border-white">{{ $procurement->total_cost }}</td>
