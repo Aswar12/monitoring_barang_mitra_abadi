@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\ProcurementController;
+use App\Http\Controllers\SaleController;
+use App\Http\Controllers\StockController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -38,3 +40,7 @@ Route::get('/procurements/create', [ProcurementController::class, 'create'])->na
 Route::post('/procurements', [ProcurementController::class, 'store'])->name('procurements.store');
 Route::get('/procurements/{id}', [ProcurementController::class, 'show'])->name('procurements.show');
 // Dan lain-lain
+
+Route::get('/sale', [SaleController::class, 'index'])->name('sale.index');
+
+Route::get('/sale', [StockController::class, 'index'])->name('stock.index');
