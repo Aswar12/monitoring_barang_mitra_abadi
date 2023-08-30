@@ -6,7 +6,7 @@
 <div class="py-12 ">
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-4 dark:bg-gray-500">
         <div class="bg-white dark:bg-gray-500 overflow-hidden shadow-xl sm:rounded-lg rounded-lg ">
-            <h1 class="text-center text-lg font-bold mb-2 py-2">Daftar Barang</h1>
+            <h1 class="text-center text-lg font-bold mb-2 py-2">Daftar Pengadaan</h1>
 
             <div class="overflow-x-auto dark:bg-gray-600 justify-between">
                 <table class="w-full border-2 dark:border-gray-300 rounded-lg ">
