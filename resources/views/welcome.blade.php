@@ -39,7 +39,7 @@
 <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
         @if (Route::has('login'))
-        <h3 class="logo"><a href="index.html">PT. Mitra Abadi Distribusindo</a></h3>
+        <h3 class="logo"><a href="#">PT. Mitra Abadi Distribusindo</a></h3>
         <nav id="navbar" class="navbar">
             <ul>
                 <li>
@@ -81,10 +81,10 @@
                                 aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem
                                 mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti
                                 vel. Minus et tempore modi architecto.</p>
-                            <div>
+                            {{-- <div>
                                 <a href="#about"
                                     class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 </div>
@@ -98,10 +98,10 @@
                                 aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem
                                 mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti
                                 vel. Minus et tempore modi architecto.</p>
-                            <div>
+                            {{-- <div>
                                 <a href="#about"
                                     class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 </div>
@@ -115,10 +115,10 @@
                                 aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem
                                 mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti
                                 vel. Minus et tempore modi architecto.</p>
-                            <div>
+                            {{-- <div>
                                 <a href="#about"
                                     class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 </div>
