@@ -2,7 +2,9 @@
 
 namespace Database\Factories;
 
+use App\Models\Item;
 use Illuminate\Database\Eloquent\Factories\Factory;
+
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Sale>
@@ -23,6 +25,7 @@ class SaleFactory extends Factory
             'quantity_sold' => $this->faker->randomNumber(),
             'selling_price' => $this->faker->randomFloat(2, 10, 100),
             'sale_date' => $this->faker->date(),
+
         ];
     }
 }
