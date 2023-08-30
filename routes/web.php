@@ -43,4 +43,4 @@ Route::get('/procurements/{id}', [ProcurementController::class, 'show'])->name('
 
 Route::get('/sale', [SaleController::class, 'index'])->name('sale.index');
 
-Route::get('/sale', [StockController::class, 'index'])->name('stock.index');
+Route::get('/stock', [StockController::class, 'index'])->name('stock.index');
