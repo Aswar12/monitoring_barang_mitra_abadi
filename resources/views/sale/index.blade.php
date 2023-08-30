@@ -1,4 +1,4 @@
-extends('layouts.app')
+@extends('layouts.app')
 @section('content')
 
 <h6>Penjualan</h6>
@@ -13,7 +13,7 @@ extends('layouts.app')
                     <thead>
                         <tr class="bg-gray-100 dark:bg-gray-100 rounded-lg ">
                             <th class="border px-6 py-3 dark:border-black">No</th>
-                            <th class="border px-6 py-3 dark:border-black">ID Barang</th>
+                            <th class="border px-6 py-3 dark:border-black">Nama Barang</th>
                             <th class="border px-6 py-3 dark:border-black">Jumlah Terjual</th>
                             <th class="border px-6 py-3 dark:border-black">Harga Jual</th>
                             <th class="border px-6 py-3 dark:border-black">Tanggal Terjual</th>
@@ -23,7 +23,7 @@ extends('layouts.app')
                         @foreach ($sales as $index => $sales)
                         <tr class="bg-white dark:bg-gray-600">
                             <td class="border px-6 py-3 dark:border-white">{{ $index + 1 }}</td>
-                            <td class="border px-6 py-3 dark:border-white">{{ $sales->item_id }}</td>
+                            <td class="border px-6 py-3 dark:border-white">{{ $sales->item->name }}</td>
                             <td class="border px-6 py-3 dark:border-white">{{ $sales->quantity_sold }}</td>
                             <td class="border px-6 py-3 dark:border-white">{{ $sales->selling_price }}</td>
                             <td class="border px-6 py-3 dark:border-white">{{ $sales->sale_date }}</td>
