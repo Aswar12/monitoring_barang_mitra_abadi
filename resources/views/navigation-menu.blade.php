@@ -21,6 +21,12 @@
                     <x-nav-link href="{{ route('procurements') }}" :active="request()->routeIs('procurements')">
                         {{ __('Procurements') }}
                     </x-nav-link>
+                    <x-nav-link href="{{ route('procurements') }}" :active="request()->routeIs('procurements')">
+                        {{ __('Sale') }}
+                    </x-nav-link>
+                    <x-nav-link href="{{ route('procurements') }}" :active="request()->routeIs('procurements')">
+                        {{ __('Stock') }}
+                    </x-nav-link>
                 </div>
             </div>
 
