@@ -34,6 +34,23 @@ Route::middleware([
 });
 
 Route::get('/items', [ItemController::class, 'index'])->name('items.index');
+// Menampilkan formulir tambah item
+Route::get('/items/create', [ItemController::class, 'create']);
+
+// Menyimpan item baru
+Route::post('/items', [ItemController::class, 'store']);
+
+// Menampilkan detail item
+Route::get('/items/{item}', [ItemController::class, 'show']);
+
+// Menampilkan formulir edit item
+Route::get('/items/{item}/edit', [ItemController::class, 'edit']);
+
+// Mengupdate item
+Route::put('/items/{item}', [ItemController::class, 'update']);
+
+// Menghapus item
+Route::delete('/items/{item}', [ItemController::class, 'destroy']);
 
 Route::get('/procurements', [ProcurementController::class, 'index'])->name('procurements.index');
 Route::get('/procurements/create', [ProcurementController::class, 'create'])->name('procurements.create');
@@ -44,3 +61,5 @@ Route::get('/procurements/{id}', [ProcurementController::class, 'show'])->name('
 Route::get('/sale', [SaleController::class, 'index'])->name('sale.index');
 
 Route::get('/stock', [StockController::class, 'index'])->name('stock.index');
+
+

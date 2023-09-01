@@ -13,6 +13,7 @@
                             <th class="border px-6 py-3 dark:border-black">Nama</th>
                             <th class="border px-6 py-3 dark:border-black">Deskripsi</th>
                             <th class="border px-6 py-3 dark:border-black">Harga Satuan</th>
+                            <th class="border px-6 py-3 dark:border-black">Tindakan</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -22,6 +23,15 @@
                             <td class="border px-6 py-3 dark:border-white">{{ $item->name }}</td>
                             <td class="border px-6 py-3 dark:border-white">{{ $item->description }}</td>
                             <td class="border px-6 py-3 dark:border-white">{{ $item->unit_price }}</td>
+                            <td>
+                    <a href="/items/{{ $item->id }}">Detail</a>
+                    <a href="/items/{{ $item->id }}/edit">Edit</a>
+                    <form action="/items/{{ $item->id }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit">Hapus</button>
+                    </form>
+                </td>
                         </tr>
                         @endforeach
                     </tbody>
