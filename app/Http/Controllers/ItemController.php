@@ -27,6 +27,7 @@ class ItemController extends Controller
         // Validasi input
         $request->validate([
             'name' => 'required',
+            'description' => 'require',
             'price' => 'required|numeric',
         ]);
 
@@ -54,6 +55,7 @@ class ItemController extends Controller
         // Validasi input
         $request->validate([
             'name' => 'required',
+            'description' => 'require',
             'price' => 'required|numeric',
         ]);
 
