@@ -1,9 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Edit Item</title>
-</head>
-<body>
+@extends('layouts.app')
+@section('content')
     <h1>Edit Item</h1>
     <form action="/items/{{ $item->id }}" method="POST">
         @csrf
@@ -20,5 +16,4 @@
         <button type="submit">Simpan Perubahan</button>
     </form>
     <a href="/items">Kembali ke Daftar Item</a>
-</body>
-</html>
+@endsection
