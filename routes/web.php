@@ -35,7 +35,7 @@ Route::middleware([
 
 Route::get('/items', [ItemController::class, 'index'])->name('items.index');
 // Menampilkan formulir tambah item
-Route::get('/items/create', [ItemController::class, 'create']);
+Route::get('/items-create', [ItemController::class, 'create'])->name('items.create');
 
 // Menyimpan item baru
 Route::post('/items', [ItemController::class, 'store']);
@@ -61,5 +61,3 @@ Route::get('/procurements/{id}', [ProcurementController::class, 'show'])->name('
 Route::get('/sale', [SaleController::class, 'index'])->name('sale.index');
 
 Route::get('/stock', [StockController::class, 'index'])->name('stock.index');
-
-
