@@ -1,4 +1,4 @@
-@extends('../layouts.app')
+@extends('layouts.app')
 @section('content')
 <div class="py-12 ">
     <div class="mx-auto max-w-7xl sm:px-6 lg:px-4 dark:bg-gray-500">
@@ -10,7 +10,8 @@
                     @foreach ($errors->all() as $error)
                     <li>{{ $error }}</li>
                     @endforeach
-                </ul> </div>
+                </ul>
+            </div>
             @endif
             <form action="/items" method="POST">
                 @csrf

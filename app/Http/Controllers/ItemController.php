@@ -18,7 +18,8 @@ class ItemController extends Controller
     // Menampilkan formulir tambah item
     public function create()
     {
-        return view('items.create');
+        $items = Item::all();
+        return view('items.create', compact('items'));
     }
 
     // Menyimpan item baru

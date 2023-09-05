@@ -6,7 +6,7 @@
             <h1 class="py-2 mb-2 text-lg font-bold text-center">Daftar Barang</h1>
             {{-- //buatkan tombol tambah data --}}
             <div class="flex justify-end px-4 py-3 text-right sm:px-6">
-                <a href="/items/create" class="px-4 py-2 font-bold text-white bg-black rounded">Tambah Data</a>
+                <a href="/items-create" class="px-4 py-2 font-bold text-white bg-black rounded">Tambah Data</a>
             </div>
             <div class="overflow-x-auto dark:bg-gray-600">
                 <table class="min-w-full border rounded-lg dark:border-gray-300 ">
@@ -27,14 +27,14 @@
                             <td class="px-6 py-3 border dark:border-white">{{ $item->description }}</td>
                             <td class="px-6 py-3 border dark:border-white">{{ $item->unit_price }}</td>
                             <td>
-                    <a href="/items/{{ $item->id }}">Detail</a>
-                    <a href="/items/{{ $item->id }}/edit">Edit</a>
-                    <form action="/items/{{ $item->id }}" method="POST">
-                        @csrf
-                        @method('DELETE')
-                        <button type="submit">Hapus</button>
-                    </form>
-                </td>
+                                <a href="/items/{{ $item->id }}">Detail</a>
+                                <a href="/items/{{ $item->id }}/edit">Edit</a>
+                                <form action="/items/{{ $item->id }}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit">Hapus</button>
+                                </form>
+                            </td>
                         </tr>
                         @endforeach
                     </tbody>
