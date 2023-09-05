@@ -9,7 +9,7 @@
                 <a href="/items-create" class="px-4 py-2 font-bold text-white bg-black rounded">Tambah Data</a>
             </div>
             <div class="overflow-x-auto dark:bg-gray-600">
-                <table class="min-w-full border rounded-lg dark:border-gray-300 ">
+                <table class="min-w-full border rounded-lg dark:border-gray-300">
                     <thead>
                         <tr class="bg-gray-100 rounded-lg dark:bg-gray-100 ">
                             <th class="px-6 py-3 border dark:border-black">#</th>
@@ -27,12 +27,15 @@
                             <td class="px-6 py-3 border dark:border-white">{{ $item->description }}</td>
                             <td class="px-6 py-3 border dark:border-white">{{ $item->unit_price }}</td>
                             <td>
-                                <a href="/items/{{ $item->id }}">Detail</a>
-                                <a href="/items/{{ $item->id }}/edit">Edit</a>
-                                <form action="/items/{{ $item->id }}" method="POST">
+                                <a href="/items/{{ $item->id }}/edit" class="btn btn-primary">
+                                    <i class="fas fa-edit"></i> Edit
+                                </a>
+                                <form action="/items/{{ $item->id }}" method="POST" class="inline-block">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit">Hapus</button>
+                                    <button type="submit" class="btn btn-danger">
+                                        <i class="fas fa-trash"></i> Hapus
+                                    </button>
                                 </form>
                             </td>
                         </tr>
