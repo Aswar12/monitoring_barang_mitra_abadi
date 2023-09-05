@@ -1,19 +1,32 @@
 @extends('layouts.app')
 @section('content')
-    <h1>Edit Item</h1>
-    <form action="/items/{{ $item->id }}" method="POST">
-        @csrf
+    <div class="py-12 ">
+        <div class="mx-auto max-w-7xl sm:px-6 lg:px-4 dark:bg-gray-500">
+            <div class="overflow-hidden bg-white rounded-lg shadow-xl dark:bg-gray-500 sm:rounded-lg ">
+
+                <h5>Edit Item</h5>
+                {{-- <form action="{{ route('items.update', $item->id) }}" method="POST"> --}}
+    @csrf
         @method('PUT')
-        <label for="name">Nama:</label>
-        <input type="text" name="name" id="name" value="{{ $item->name }}" required>
-        <br>
-        <label for="deskription">Deskripsi:</label>
-        <input type="text" name="deskription" id="deskription" value="{{ $item->description }}" required>
-        <br>
-        <label for="price">Harga:</label>
-        <input type="number" name="price" id="price" value="{{ $item->price }}" required>
-        <br>
-        <button type="submit">Simpan Perubahan</button>
-    </form>
-    <a href="/items">Kembali ke Daftar Item</a>
-@endsection
+        <div class="grid grid-cols-2 gap-2">
+            <div class="p-2">
+                    <label for="name">Item Name</label>
+                    <input type="text" class="w-full p-2 border rounded shadow" name="name" value="{{ $item->name }}">
+                </div>
+                <div class="p-2">
+                    <label for="description">Item Description</label>
+                    <textarea class="w-full p-2 border rounded shadow" name="description">{{ $item->description }}</textarea>
+                </div>
+                <div class="p-2">
+                    <label for="price">Item Price</label>
+                    <input type="text" class="w-full p-2 border rounded shadow" name="price" value="{{ $item->price }}">
+                </div>
+                <div class="p-2">
+                    <label for="quantity">Item Quantity</label>
+                    <input type="text" class="w-full p-2 border rounded shadow" name="quantity" value="{{ $item->quantity }}">
+                </div>
+                <div>
+                <button type="submit" class=" text-white bg-black ">Update Item</button>
+                </div>
+                <p></p>
+            @endsection

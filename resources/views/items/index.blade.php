@@ -27,7 +27,7 @@
                             <td class="px-6 py-3 border dark:border-white">{{ $item->description }}</td>
                             <td class="px-6 py-3 border dark:border-white">{{ $item->unit_price }}</td>
                             <td>
-                                <a href="/items/{{ $item->id }}/edit" class="btn btn-primary">
+                                <a href="/items-edit-{{ $item->id }}" class="btn btn-primary">
                                     <i class="fas fa-edit"></i> Edit
                                 </a>
                                 <form action="/items/{{ $item->id }}" method="POST" class="inline-block">
