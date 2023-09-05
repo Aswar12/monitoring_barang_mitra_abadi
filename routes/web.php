@@ -44,7 +44,7 @@ Route::post('/items', [ItemController::class, 'store']);
 Route::get('/items/{item}', [ItemController::class, 'show']);
 
 // Menampilkan formulir edit item
-Route::get('/items/{item}/edit', [ItemController::class, 'edit']);
+Route::get('/items-edit-{item}', [ItemController::class, 'edit']);
 
 // Mengupdate item
 Route::put('/items/{item}', [ItemController::class, 'update']);
