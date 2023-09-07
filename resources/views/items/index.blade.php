@@ -8,6 +8,7 @@
             <div class="flex justify-end px-4 py-3 text-right sm:px-6">
                 <a href="/items-create" class="px-4 py-2 font-bold text-white bg-black rounded">Tambah Data</a>
             </div>
+            {{-- FIRMANSYAH --}}
             <div class="overflow-x-auto dark:bg-gray-600">
                 <table class="min-w-full border rounded-lg dark:border-gray-300">
                     <thead>
