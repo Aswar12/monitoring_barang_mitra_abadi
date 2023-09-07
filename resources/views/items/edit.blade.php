@@ -25,8 +25,8 @@
                     <label for="quantity">Item Quantity</label>
                     <input type="text" class="w-full p-2 border rounded shadow" name="quantity" value="{{ $item->quantity }}">
                 </div>
-                <div>
-                <button type="submit" class=" text-white bg-black ">Update Item</button>
+                <div class="flex justify-end px-4 py-3 text-right sm:px-6">
+                    <a href="#" class="px-4 py-2 font-bold text-white bg-black rounded">Tambah Data</a>
                 </div>
                 <p></p>
             @endsection
