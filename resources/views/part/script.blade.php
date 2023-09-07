@@ -6,3 +6,8 @@
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 <!-- main script file  -->
 <script src="./assets/js/soft-ui-dashboard-tailwind.js?v=1.0.5" async></script>
+<script>
+    function toggleDropdown() {
+        return { isDropdownOpen: false, toggleDropdown() { this.isDropdownOpen = !this.isDropdownOpen } }
+    }
+</script>

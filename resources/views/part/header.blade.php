@@ -276,50 +276,24 @@
 
 <main class="ease-soft-in-out xl:ml-68.5 relative h-full max-h-screen rounded-xl transition-all duration-200">
     <!-- Navbar -->
-    <nav class="relative flex flex-wrap items-center justify-between px-0 py-2  transition-all shadow-none duration-250 ease-soft-in rounded-2xl lg:flex-nowrap lg:justify-start"
+    <nav class="relative flex flex-wrap items-center justify-between px-0  transition-all shadow-none duration-250 ease-soft-in rounded-2xl lg:flex-nowrap lg:justify-start"
         navbar-main navbar-scroll="true">
-        <div class="flex items-center justify-between w-full px-4 py-1 mx-auto flex-wrap-inherit">
-            <nav>
+        <div class="flex items-center justify-between w-full px-4  mx-auto flex-wrap-inherit">
+            <nav class="flex row-auto content-between">
                 <!-- breadcrumb -->
-                <ol class="flex flex-wrap pt-1 mr-12 bg-transparent rounded-lg sm:mr-16">
-                    <li class="text-sm leading-normal">
-                        <a class="opacity-50 text-slate-700" href="javascript:;">Pages</a>
-                    </li>
-                    <li class="text-sm pl-2 capitalize leading-normal text-slate-700 before:float-left before:pr-2 before:text-gray-600 before:content-['/']"
-                        aria-current="page">Dashboard</li>
-                </ol>
+
                 <h6 class="mb-0 font-bold capitalize">Dashboard</h6>
+
             </nav>
+            <x-jet-dropdown-link href="{{ route('logout') }}"
+                onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                Logout
+            </x-jet-dropdown-link>
+            <form id="logout-form" method="POST" action="{{ route('logout') }}">
+                @csrf
+            </form>
 
-            <div class="flex items-center mt-2 grow sm:mt-0 sm:mr-6 md:mr-0 lg:flex lg:basis-auto">
-
-
-                <div class="ml-3 relative">
-
-                    @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
-                    <button
-                        class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition">
-                        <img class="h-8 w-8 rounded-full object-cover" src="{{ Auth::user()->profile_photo_url }}"
-                            alt="{{ Auth::user()->name }}" />
-                    </button>
-                    @else
-                    <span class="inline-flex rounded-md">
-                        <button type="button"
-                            class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition">
-                            {{ Auth::user()->name }}
-
-                            <svg class="ml-2 -mr-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-                                fill="currentColor">
-                                <path fill-rule="evenodd"
-                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                        </button>
-                    </span>
-                    @endif
-                </div>
-            </div>
         </div>
     </nav>
-
-    <!-- end Navbar -->
+</main>
+<!-- end Navbar -->@livewireScripts

@@ -25,7 +25,9 @@
     </main>
 
 
+
 </body>
 @include('part.script')
+@livewireScripts
 
 </html>
