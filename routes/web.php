@@ -38,16 +38,16 @@ Route::get('/items', [ItemController::class, 'index'])->name('items.index');
 Route::get('/items-create', [ItemController::class, 'create'])->name('items.create');
 
 // Menyimpan item baru
-Route::post('/items', [ItemController::class, 'store']);
+Route::post('/items-store', [ItemController::class, 'store'])->name('items.store');
 
 // Menampilkan detail item
 Route::get('/items/{item}', [ItemController::class, 'show']);
 
 // Menampilkan formulir edit item
-Route::get('/items-edit-{item}', [ItemController::class, 'edit']);
+Route::get('/items-edit-{item}', [ItemController::class, 'edit'])->name('items.edit');
 
 // Mengupdate item
-Route::put('/items/{item}', [ItemController::class, 'update']);
+Route::put('/items-{item}', [ItemController::class, 'update'])->name('items.update');
 
 // Menghapus item
 Route::delete('/items/{item}', [ItemController::class, 'destroy']);
