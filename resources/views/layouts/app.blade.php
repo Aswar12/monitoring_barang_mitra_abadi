@@ -10,13 +10,14 @@
     @include('part.link')
 
     <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
-    {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
+    {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}\
+    @livewireStyles
 </head>
 {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
 
 <body class="m-0 font-sans text-base antialiased font-normal leading-default bg-gray-50 text-slate-500">
     <!-- sidenav  -->
-    @livewireStyles
+
     @include('part.header')
     <!-- cards -->
 
