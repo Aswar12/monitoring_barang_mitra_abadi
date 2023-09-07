@@ -61,7 +61,7 @@ class ItemController extends Controller
         // Validasi input
         $request->validate([
             'name' => 'required',
-            'description' => 'require',
+            'description' => 'required',
             'unit_price' => 'required|numeric',
             'demand_rate' => 'required|numeric',
             'ordering_cost' => 'required|numeric',

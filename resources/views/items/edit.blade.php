@@ -5,7 +5,7 @@
             <div class="overflow-hidden bg-white rounded-lg shadow-xl dark:bg-gray-500 sm:rounded-lg ">
 
                 <h5>Edit Item</h5>
-                {{-- <form action="{{ route('items.update', $item->id) }}" method="POST"> --}}
+                <form action="{{ route('items.update', $item->id) }}" method="POST">
     @csrf
         @method('PUT')
         <div class="grid grid-cols-2 gap-2">
@@ -18,7 +18,7 @@
                     <textarea class="w-full p-2 border rounded shadow" name="description">{{ $item->description }}</textarea>
                 </div>
                 <div class="p-2">
-                    <label for="price">Item Price</label>
+                    <label for="unit_price">Item Price</label>
                     <input type="text" class="w-full p-2 border rounded shadow" name="unit_price" value="{{ $item->unit_price }}">
                 </div>
                 <div class="p-2">
@@ -38,7 +38,7 @@
                     <input type="text" class="w-full p-2 border rounded shadow" name="quantity" value="{{ $item->quantity }}">
                 </div> --}}
                 <div class="flex justify-end px-4 py-3 text-right sm:px-6">
-                    <a href="#" class="px-4 py-2 font-bold text-white bg-black rounded">Update data</a>
+                    <button type="submit" class="px-4 py-2 font-bold text-white bg-black rounded">Update data</button>
                 </div>
                 <p></p>
             @endsection
