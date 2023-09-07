@@ -38,7 +38,7 @@ Route::get('/items', [ItemController::class, 'index'])->name('items.index');
 Route::get('/items-create', [ItemController::class, 'create'])->name('items.create');
 
 // Menyimpan item baru
-Route::post('/items', [ItemController::class, 'store']);
+Route::post('/items-store', [ItemController::class, 'store'])->name('items.store');;
 
 // Menampilkan detail item
 Route::get('/items/{item}', [ItemController::class, 'show']);

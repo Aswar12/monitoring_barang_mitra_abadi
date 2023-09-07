@@ -8,6 +8,18 @@ use Illuminate\Database\Eloquent\Model;
 class Item extends Model
 {
     use HasFactory;
+
+
+    protected $fillable = [
+        'name',
+        'description',
+        'unit_price',
+        'demand_rate',
+        'ordering_cost',
+        'holding_cost',
+    ];
+
+
     public function procurements()
     {
         return $this->hasMany(Procurement::class);

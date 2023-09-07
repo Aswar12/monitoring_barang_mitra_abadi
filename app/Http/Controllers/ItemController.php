@@ -28,12 +28,17 @@ class ItemController extends Controller
         // Validasi input
         $request->validate([
             'name' => 'required',
-            'description' => 'require',
-            'price' => 'required|numeric',
+            'description' => 'required',
+            'unit_price' => 'required|numeric',
+            'demand_rate' => 'required|numeric',
+            'ordering_cost' => 'required|numeric',
+            'holding_cost' => 'required|numeric',
         ]);
 
         // Simpan item baru
         Item::create($request->all());
+
+
 
         return redirect('/items')->with('success', 'Item berhasil ditambahkan');
     }
@@ -57,7 +62,10 @@ class ItemController extends Controller
         $request->validate([
             'name' => 'required',
             'description' => 'require',
-            'price' => 'required|numeric',
+            'unit_price' => 'required|numeric',
+            'demand_rate' => 'required|numeric',
+            'ordering_cost' => 'required|numeric',
+            'holding_cost' => 'required|numeric',
         ]);
 
         // Update item
