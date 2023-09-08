@@ -24,10 +24,9 @@ class ProcurementController extends Controller
                 // Validasi input
                 $request->validate([
                     'item_id'=> 'required',
-                    'quantity'=> 'required',
-                    'unit_price'=> 'required',
-                    'total_price'=> 'required',
-                    'date'=> 'required',
+                    'order_quantity'=> 'required',
+                    'total_cost'=> 'required',
+                    'procurement_date'=> 'required',
                     // Tambahkan validasi lainnya sesuai kebutuhan
                 ]);
         

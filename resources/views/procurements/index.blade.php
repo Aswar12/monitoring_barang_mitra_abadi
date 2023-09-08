@@ -9,7 +9,7 @@
             <h1 class="py-2 mb-2 text-lg font-bold text-center">Daftar Pengadaan</h1>
             {{-- //buatkan tombol tambah data --}}
             <div class="flex justify-end px-4 py-3 text-right sm:px-6">
-                <a href="/procurement-create" class="px-4 py-2 font-bold text-white bg-black rounded">Tambah Data</a>
+                <a href="/procurements-create" class="px-4 py-2 font-bold text-white bg-black rounded">Tambah Data</a>
             </div>
 <div class="py-12 ">
     

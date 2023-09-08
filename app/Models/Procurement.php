@@ -11,10 +11,9 @@ class Procurement extends Model
 
     protected $fillable = [
         'item_id',
-        'quantity',
-        'unit_price',
-        'total_price',
-        'date',
+        'order_quantity',
+        'total_cost',
+        'procurement_date',
     ];
 
 
