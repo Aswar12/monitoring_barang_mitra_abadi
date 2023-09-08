@@ -117,8 +117,7 @@
                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <title>box-3d-50</title>
                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                <g transform="translate(-2319.000000, -291.000000)" fill="#FFFFFF"
-                                    fill-rule="nonzero">
+                                <g transform="translate(-2319.000000, -291.000000)" fill="#FFFFFF" fill-rule="nonzero">
                                     <g transform="translate(1716.000000, 291.000000)">
                                         <g transform="translate(603.000000, 0.000000)">
                                             <path class="fill-slate-800"
@@ -149,8 +148,7 @@
                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <title>settings</title>
                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                <g transform="translate(-2020.000000, -442.000000)" fill="#FFFFFF"
-                                    fill-rule="nonzero">
+                                <g transform="translate(-2020.000000, -442.000000)" fill="#FFFFFF" fill-rule="nonzero">
                                     <g transform="translate(1716.000000, 291.000000)">
                                         <g transform="translate(304.000000, 151.000000)">
                                             <polygon class="fill-slate-800 opacity-60"
@@ -185,8 +183,7 @@
                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <title>customer-support</title>
                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                <g transform="translate(-1717.000000, -291.000000)" fill="#FFFFFF"
-                                    fill-rule="nonzero">
+                                <g transform="translate(-1717.000000, -291.000000)" fill="#FFFFFF" fill-rule="nonzero">
                                     <g transform="translate(1716.000000, 291.000000)">
                                         <g transform="translate(1.000000, 0.000000)">
                                             <path class="fill-slate-800 opacity-60"
@@ -217,8 +214,7 @@
                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <title>document</title>
                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                <g transform="translate(-1870.000000, -591.000000)" fill="#FFFFFF"
-                                    fill-rule="nonzero">
+                                <g transform="translate(-1870.000000, -591.000000)" fill="#FFFFFF" fill-rule="nonzero">
                                     <g transform="translate(1716.000000, 291.000000)">
                                         <g transform="translate(154.000000, 300.000000)">
                                             <path class="fill-slate-800 opacity-60"
@@ -246,8 +242,7 @@
                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <title>spaceship</title>
                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                <g transform="translate(-1720.000000, -592.000000)" fill="#FFFFFF"
-                                    fill-rule="nonzero">
+                                <g transform="translate(-1720.000000, -592.000000)" fill="#FFFFFF" fill-rule="nonzero">
                                     <g transform="translate(1716.000000, 291.000000)">
                                         <g transform="translate(4.000000, 301.000000)">
                                             <path class="fill-slate-800"
@@ -299,29 +294,37 @@
             <div class="flex items-center mt-2 grow sm:mt-0 sm:mr-6 md:mr-0 lg:flex lg:basis-auto">
 
 
-                <div class="relative ml-3">
-
-                    @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
-                    <button
-                        class="flex text-sm transition border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300">
-                        <img class="object-cover w-8 h-8 rounded-full" src="{{ Auth::user()->profile_photo_url }}"
-                            alt="{{ Auth::user()->name }}" />
-                    </button>
-                    @else
-                    <span class="inline-flex rounded-md">
-                        <button type="button"
-                            class="inline-flex items-center px-3 py-2 text-sm font-medium leading-4 text-gray-500 transition bg-white border border-transparent rounded-md hover:text-gray-700 focus:outline-none">
+                <div class="relative">
+                    <x-jet-responsive-nav-link href="{{ route('profile.show') }}"
+                        :active="request()->routeIs('profile.show')">
+                        <div class="flex-shrink-0 h-10 w-10">
+                            <img class="h-10 w-10 rounded-full" src="{{ Auth::user()->profile_photo_url }}"
+                                alt="{{ Auth::user()->name }}">
+                        </div>
+                        <div class="ml-4 text-base font-medium text-gray-200">
                             {{ Auth::user()->name }}
+                        </div>
+                    </x-jet-responsive-nav-link>
+                    <!-- Avatar dan Nama Pengguna -->
+                    <x-jet-responsive-nav-link href="{{ route('profile.show') }}"
+                        :active="request()->routeIs('profile.show')">
+                        <!-- Isi Avatar dan Nama Pengguna di sini -->
+                    </x-jet-responsive-nav-link>
 
-                            <svg class="ml-2 -mr-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-                                fill="currentColor">
-                                <path fill-rule="evenodd"
-                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                        </button>
-                    </span>
-                    @endif
+                    <!-- Dropdown Menu -->
+                    <div
+                        class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+                        <div class="py-1 rounded-md bg-white shadow-xs">
+                            <!-- Opsi Dropdown (contoh: Profile, Logout) -->
+                            <a href="{{ route('profile.show') }}"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Profile</a>
+                            <form method="POST" action="{{ route('logout') }}">
+                                @csrf
+                                <button type="submit"
+                                    class="block w-full text-left px-4 py-2 text-sm text-red-700 hover:bg-red-100">Logout</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
