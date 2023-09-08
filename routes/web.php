@@ -53,10 +53,18 @@ Route::put('/items-{item}', [ItemController::class, 'update'])->name('items.upda
 Route::delete('/items/{item}', [ItemController::class, 'destroy']);
 
 Route::get('/procurements', [ProcurementController::class, 'index'])->name('procurements.index');
-Route::get('/procurements/create', [ProcurementController::class, 'create'])->name('procurements.create');
-Route::post('/procurements', [ProcurementController::class, 'store'])->name('procurements.store');
-Route::get('/procurements/{id}', [ProcurementController::class, 'show'])->name('procurements.show');
+Route::get('/procurements-create', [ProcurementController::class, 'create'])->name('procurements.create');
+Route::post('/procurements-store', [ProcurementController::class, 'store'])->name('procurements.store');
 // Dan lain-lain
+
+// Menampilkan formulir edit item
+Route::get('/procurements-edit-{procurements}', [ProcurementController::class, 'edit'])->name('procurements.edit');
+
+// Mengupdate item
+Route::put('/procurements-update-{procurements}', [ProcurementController::class, 'update'])->name('procurements.update');
+
+// Menghapus item
+Route::delete('/procurements-destroy-{procurements}', [ProcurementController::class, 'destroy']);
 
 Route::get('/sale', [SaleController::class, 'index'])->name('sale.index');
 
