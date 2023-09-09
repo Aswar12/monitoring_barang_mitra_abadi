@@ -8,6 +8,11 @@
                 @csrf
                 <div class="grid grid-cols-2 gap-4">
                     <div class="p-4">
+                        <label for="name">Masukan ID</label>
+                        <input type="text" name="id" id="id" class="w-full p-2 border rounded shadow" placeholder="Masukkan ID">
+                    </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="p-4">
                         <label for="name">Masukan ID Barang</label>
                         <input type="text" name="item_id" id="item_id" class="w-full p-2 border rounded shadow" placeholder="Masukkan nama barang">
                     </div>

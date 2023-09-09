@@ -10,6 +10,7 @@ class Procurement extends Model
     use HasFactory;
 
     protected $fillable = [
+        'id',
         'item_id',
         'order_quantity',
         'total_cost',

@@ -23,6 +23,7 @@ class ProcurementController extends Controller
     {
                 // Validasi input
                 $request->validate([
+                    'id'=>'required',
                     'item_id'=> 'required',
                     'order_quantity'=> 'required',
                     'total_cost'=> 'required',
